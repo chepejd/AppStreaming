@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ui.login.LoginActivity">
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:allowUndo="false"
+        android:backgroundTint="#D41EF3"
+        android:text="Registrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="581dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#D41EF3"
+        android:enabled="false"
+        android:text="Ingresar"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="279dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/fb" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/gm" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="70dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/twit" />
+
+</android.support.constraint.ConstraintLayout>
